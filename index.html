@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votación Escuela Corea</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <style>
+        body { font-family: 'Fredoka', sans-serif; }
+        :root {
+            --azul-logo: #003D82;
+            --rojo-logo: #C60C30;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 via-white to-red-50 min-h-screen flex flex-col">
+    
+    <!-- Encabezado -->
+    <header class="bg-white shadow-md border-b-4 border-blue-800">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-center md:justify-start">
+            <div class="flex items-center gap-4">
+                <!-- Logo: Asegúrate de guardar tu imagen como 'logo.jpg' en esta carpeta -->
+                <img src="logo.jpg" alt="Logo Escuela" class="h-20 w-auto">
+                <div>
+                    <h1 class="text-sm font-bold text-gray-700 uppercase tracking-wider">Escuela República de Corea</h1>
+                    <h2 class="text-xl md:text-2xl font-bold uppercase leading-none" style="color: #003D82;">Quepos - Puntarenas</h2>
+                    <p class="text-xs font-semibold uppercase tracking-widest mt-1" style="color: #C60C30;">Sistema de Votación Digital</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        
+        <!-- Título -->
+        <h1 class="text-3xl md:text-5xl font-extrabold text-center mb-10">
+            <span style="color: #003D82;">¡VOTA POR TU</span> <span style="color: #C60C30;">CANDIDATO!</span>
+        </h1>
+        
+        <!-- Grid de Candidatos -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            
+            <!-- Tarjeta 1: PARTIDO DEL SOL -->
+            <div class="bg-white rounded-2xl shadow-md border-2 border-gray-100 p-4 transform transition hover:-translate-y-1 hover:shadow-lg flex flex-col items-center">
+                <div class="w-full aspect-[4/3] rounded-xl overflow-hidden mb-4 bg-gray-200">
+                    <img src="https://via.placeholder.com/300x225/FDE047/FFFFFF?text=PARTIDO+DEL+SOL" alt="Candidato 1" class="w-full h-full object-cover">
+                </div>
+                <div class="flex items-center justify-center gap-2 mb-4 w-full">
+                    <i class="fas fa-sun text-yellow-500 text-xl"></i>
+                    <h2 class="text-lg font-bold text-gray-800 uppercase tracking-tight text-center leading-tight">PARTIDO DEL SOL</h2>
+                    <i class="fas fa-sun text-yellow-500 text-xl"></i>
+                </div>
+                <button onclick="openModal('PARTIDO DEL SOL')" class="w-full text-white font-bold py-3 px-6 rounded-xl text-xl transition flex items-center justify-center gap-2 shadow-md hover:shadow-lg hover:opacity-90" style="background-color: #003D82;">
+                    VOTAR
+                    <i class="fas fa-check-circle ml-2"></i>
+                </button>
+            </div>
+
+            <!-- Tarjeta 2: MOVIMIENTO ESTUDIANTIL -->
+            <div class="bg-white rounded-2xl shadow-md border-2 border-gray-100 p-4 transform transition hover:-translate-y-1 hover:shadow-lg flex flex-col items-center">
+                <div class="w-full aspect-[4/3] rounded-xl overflow-hidden mb-4 bg-gray-200">
+                    <img src="https://via.placeholder.com/300x225/EF4444/FFFFFF?text=MOVIMIENTO+ESTUDIANTIL" alt="Candidato 2" class="w-full h-full object-cover">
+                </div>
+                <div class="flex items-center justify-center gap-2 mb-4 w-full">
+                    <i class="fas fa-graduation-cap text-red-500 text-xl"></i>
+                    <h2 class="text-lg font-bold text-gray-800 uppercase tracking-tight text-center leading-tight">MOVIMIENTO ESTUDIANTIL</h2>
+                    <i class="fas fa-fist-raised text-red-500 text-xl"></i>
+                </div>
+                <button onclick="openModal('MOVIMIENTO ESTUDIANTIL')" class="w-full text-white font-bold py-3 px-6 rounded-xl text-xl transition flex items-center justify-center gap-2 shadow-md hover:shadow-lg" style="background-color: #003D82;">
+                    VOTAR
+                    <i class="fas fa-check-circle ml-2"></i>
+                </button>
+            </div>
+
+            <!-- Tarjeta 3: PARTIDO VERDE ESCOLAR -->
+            <div class="bg-white rounded-2xl shadow-md border-2 border-gray-100 p-4 transform transition hover:-translate-y-1 hover:shadow-lg flex flex-col items-center">
+                <div class="w-full aspect-[4/3] rounded-xl overflow-hidden mb-4 bg-gray-200">
+                    <img src="https://via.placeholder.com/300x225/22C55E/FFFFFF?text=PARTIDO+VERDE" alt="Candidato 3" class="w-full h-full object-cover">
+                </div>
+                <div class="flex items-center justify-center gap-2 mb-4 w-full">
+                    <i class="fas fa-leaf text-green-600 text-xl"></i>
+                    <h2 class="text-lg font-bold text-gray-800 uppercase tracking-tight text-center leading-tight">PARTIDO VERDE ESCOLAR</h2>
+                    <i class="fas fa-tree text-green-600 text-xl"></i>
+                </div>
+                <button onclick="openModal('PARTIDO VERDE ESCOLAR')" class="w-full text-white font-bold py-3 px-6 rounded-xl text-xl transition flex items-center justify-center gap-2 shadow-md hover:shadow-lg" style="background-color: #003D82;">
+                    VOTAR
+                    <i class="fas fa-check-circle ml-2"></i>
+                </button>
+            </div>
+
+            <!-- Tarjeta 4: FUERZA INFANTIL -->
+            <div class="bg-white rounded-2xl shadow-md border-2 border-gray-100 p-4 transform transition hover:-translate-y-1 hover:shadow-lg flex flex-col items-center">
+                <div class="w-full aspect-[4/3] rounded-xl overflow-hidden mb-4 bg-gray-200">
+                    <img src="https://via.placeholder.com/300x225/3B82F6/FFFFFF?text=FUERZA+INFANTIL" alt="Candidato 4" class="w-full h-full object-cover">
+                </div>
+                <div class="flex items-center justify-center gap-2 mb-4 w-full">
+                    <i class="fas fa-child text-blue-500 text-xl"></i>
+                    <h2 class="text-lg font-bold text-gray-800 uppercase tracking-tight text-center leading-tight">FUERZA INFANTIL</h2>
+                    <i class="fas fa-hands-helping text-blue-500 text-xl"></i>
+                </div>
+                <button onclick="openModal('FUERZA INFANTIL')" class="w-full text-white font-bold py-3 px-6 rounded-xl text-xl transition flex items-center justify-center gap-2 shadow-md hover:shadow-lg" style="background-color: #003D82;">
+                    VOTAR
+                    <i class="fas fa-check-circle ml-2"></i>
+                </button>
+            </div>
+
+            <!-- Tarjeta 5: UNIÓN DE AMIGOS -->
+            <div class="bg-white rounded-2xl shadow-md border-2 border-gray-100 p-4 transform transition hover:-translate-y-1 hover:shadow-lg flex flex-col items-center">
+                <div class="w-full aspect-[4/3] rounded-xl overflow-hidden mb-4 bg-gray-200">
+                    <img src="https://via.placeholder.com/300x225/F97316/FFFFFF?text=UNION+DE+AMIGOS" alt="Candidato 5" class="w-full h-full object-cover">
+                </div>
+                <div class="flex items-center justify-center gap-2 mb-4 w-full">
+                    <i class="fas fa-users text-orange-500 text-xl"></i>
+                    <h2 class="text-lg font-bold text-gray-800 uppercase tracking-tight text-center leading-tight">UNIÓN DE AMIGOS</h2>
+                    <i class="far fa-smile text-orange-500 text-xl"></i>
+                </div>
+                <button onclick="openModal('UNIÓN DE AMIGOS')" class="w-full text-white font-bold py-3 px-6 rounded-xl text-xl transition flex items-center justify-center gap-2 shadow-md hover:shadow-lg" style="background-color: #003D82;">
+                    VOTAR
+                    <i class="fas fa-check-circle ml-2"></i>
+                </button>
+            </div>
+
+            <!-- Tarjeta 6: ECO-VOTO -->
+            <div class="bg-white rounded-2xl shadow-md border-2 border-gray-100 p-4 transform transition hover:-translate-y-1 hover:shadow-lg flex flex-col items-center">
+                <div class="w-full aspect-[4/3] rounded-xl overflow-hidden mb-4 bg-gray-200">
+                    <img src="https://via.placeholder.com/300x225/10B981/FFFFFF?text=ECO-VOTO" alt="Candidato 6" class="w-full h-full object-cover">
+                </div>
+                <div class="flex items-center justify-center gap-2 mb-4 w-full">
+                    <i class="fas fa-recycle text-emerald-600 text-xl"></i>
+                    <h2 class="text-lg font-bold text-gray-800 uppercase tracking-tight text-center leading-tight">ECO-VOTO</h2>
+                    <i class="fas fa-seedling text-emerald-600 text-xl"></i>
+                </div>
+                <button onclick="openModal('ECO-VOTO')" class="w-full text-white font-bold py-3 px-6 rounded-xl text-xl transition flex items-center justify-center gap-2 shadow-md hover:shadow-lg" style="background-color: #003D82;">
+                    VOTAR
+                    <i class="fas fa-check-circle ml-2"></i>
+                </button>
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t-4 py-4 text-center" style="border-color: #003D82;">
+        <p class="font-bold uppercase text-sm tracking-wide" style="color: #003D82;">
+            Sistema Electoral Escolar 2026
+        </p>
+        <p class="text-xs text-gray-500 mt-2">
+            Diseñado por <span class="font-semibold">Greikol Q.A</span>
+        </p>
+    </footer>
+
+    <!-- Modal de Confirmación -->
+    <div id="confirmModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 backdrop-blur-sm">
+        <div class="bg-white rounded-3xl shadow-2xl max-w-sm w-full p-8 transform transition-all text-center">
+            <div class="mb-4 text-5xl" style="color: #003D82;">
+                <i class="fas fa-vote-yea"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-gray-800 mb-2">¿Confirmar voto?</h2>
+            <p class="text-gray-500 mb-8 px-4">
+                Estás a punto de votar por:<br>
+                <span id="partyName" class="font-bold text-xl block mt-2" style="color: #C60C30;"></span>
+            </p>
+            <div class="flex flex-col gap-3">
+                <button onclick="confirmVote()" 
+                        class="w-full text-white font-bold py-3 px-6 rounded-xl text-lg transition shadow-md" style="background-color: #003D82;">
+                    ¡Votar ahora!
+                </button>
+                <button onclick="closeModal()" 
+                        class="w-full bg-gray-100 hover:bg-gray-200 text-gray-500 font-bold py-3 px-6 rounded-xl text-lg transition">
+                    Cancelar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pantalla de Gracias -->
+    <div id="thanksScreen" class="hidden fixed inset-0 flex items-center justify-center z-50 cursor-pointer" style="background: linear-gradient(135deg, #003D82 0%, #C60C30 100%);" onclick="resetSystem()">
+        <div class="text-center px-4">
+            <div class="text-white text-9xl mb-6 animate-bounce">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2 class="text-5xl md:text-6xl font-extrabold text-white mb-4">¡Gracias!</h2>
+            <p class="text-2xl text-white font-medium mb-8">Tu voto ha sido registrado exitosamente</p>
+            <p class="text-lg text-white opacity-80 mt-8">
+                <i class="fas fa-hand-pointer mr-2"></i>Toca la pantalla para continuar
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // URL de Google Apps Script configurada
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxl1Q_eaDBbFX3dpeSG4n-lP_bgecvYzNCLZBFrsKZflFHTf1Yo7glcHut-zX57ypuABQ/exec';
+        
+        let selectedParty = '';
+        let isVoting = false; // Bandera para prevenir votos múltiples
+
+        function openModal(partyName) {
+            if (isVoting) return; // No permitir abrir modal si ya está votando
+            selectedParty = partyName;
+            document.getElementById('partyName').textContent = partyName;
+            document.getElementById('confirmModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('confirmModal').classList.add('hidden');
+        }
+
+        async function confirmVote() {
+            if (isVoting) return; // Prevenir votos múltiples
+            
+            // Marcar que está votando
+            isVoting = true;
+            
+            // Guardar el partido ANTES de cerrar el modal
+            const partido = selectedParty;
+            
+            // Cerrar modal y mostrar pantalla de gracias INMEDIATAMENTE
+            document.getElementById('confirmModal').classList.add('hidden');
+            showThanksScreen();
+
+            // Preparar datos del voto
+            const formData = new URLSearchParams();
+            formData.append('partido', partido);
+            formData.append('timestamp', new Date().toISOString());
+
+            try {
+                // Enviar voto al backend (en segundo plano)
+                await fetch(SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    body: formData
+                });
+            } catch (error) {
+                console.error('Error al enviar voto:', error);
+                // No mostrar alert para no interrumpir la experiencia
+            }
+        }
+
+        function showThanksScreen() {
+            const thanksScreen = document.getElementById('thanksScreen');
+            thanksScreen.classList.remove('hidden');
+        }
+
+        function resetSystem() {
+            // Ocultar pantalla de gracias
+            document.getElementById('thanksScreen').classList.add('hidden');
+            // Resetear bandera y permitir nuevos votos
+            isVoting = false;
+            selectedParty = '';
+        }
+    </script>
+</body>
+</html>
