@@ -20,14 +20,19 @@
     
     <!-- Encabezado -->
     <header class="bg-white shadow-md border-b-4 border-blue-800">
-        <div class="container mx-auto px-4 py-4 flex items-center justify-center md:justify-start">
-            <div class="flex items-center gap-4">
+        <div class="container mx-auto px-4 py-6 flex items-center justify-center md:justify-start">
+            <div class="flex items-center gap-6">
                 <!-- Logo: Asegúrate de guardar tu imagen como 'logo.jpg' en esta carpeta -->
-                <img src="logo.jpg" alt="Logo Escuela" class="h-20 w-auto">
-                <div>
-                    <h1 class="text-sm font-bold text-gray-700 uppercase tracking-wider">Escuela República de Corea</h1>
-                    <h2 class="text-xl md:text-2xl font-bold uppercase leading-none" style="color: #003D82;">Quepos - Puntarenas</h2>
-                    <p class="text-xs font-semibold uppercase tracking-widest mt-1" style="color: #C60C30;">Sistema de Votación Digital</p>
+                <img src="logo.jpg" alt="Logo Escuela" class="h-24 w-auto">
+                <div class="text-center md:text-left">
+                    <h1 class="text-2xl md:text-3xl font-extrabold uppercase tracking-wide leading-tight" style="color: #003D82;">
+                        Escuela República de Corea
+                    </h1>
+                    <div class="mt-2 inline-block">
+                        <p class="text-sm font-bold uppercase tracking-widest px-4 py-1 rounded-full" style="background: linear-gradient(135deg, #003D82 0%, #C60C30 100%); color: white;">
+                            Sistema de Votación Digital
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -37,8 +42,8 @@
     <main class="flex-grow container mx-auto px-4 py-8">
         
         <!-- Título -->
-        <h1 class="text-3xl md:text-5xl font-extrabold text-center mb-10">
-            <span style="color: #003D82;">¡VOTA POR TU</span> <span style="color: #C60C30;">CANDIDATO!</span>
+        <h1 class="text-2xl md:text-4xl lg:text-5xl font-extrabold text-center mb-10 leading-tight">
+            <span style="color: #003D82;">¡VOTA POR TU </span><span style="color: #C60C30;">CANDIDATO!</span>
         </h1>
         
         <!-- Grid de Candidatos -->
@@ -193,7 +198,7 @@
 
     <script>
         // URL de Google Apps Script configurada
-        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxl1Q_eaDBbFX3dpeSG4n-lP_bgecvYzNCLZBFrsKZflFHTf1Yo7glcHut-zX57ypuABQ/exec';
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxcCo-QAoou7DZMq1KuVpwoHW3QrSdcEaOc6XXSFGry-ebhD4dwVdBmVWp996HCFr5CEQ/exec';
         
         let selectedParty = '';
         let isVoting = false; // Bandera para prevenir votos múltiples
