@@ -22,7 +22,6 @@
     <header class="bg-white shadow-md border-b-4 border-blue-800">
         <div class="container mx-auto px-4 py-6 flex items-center justify-center md:justify-start">
             <div class="flex items-center gap-6">
-                <!-- Logo: Asegúrate de guardar tu imagen como 'logo.jpg' en esta carpeta -->
                 <img src="logo.jpg" alt="Logo Escuela" class="h-24 w-auto">
                 <div class="text-center md:text-left">
                     <h1 class="text-2xl md:text-3xl font-extrabold uppercase tracking-wide leading-tight" style="color: #003D82;">
@@ -183,7 +182,10 @@
     </div>
 
     <!-- Pantalla de Gracias -->
-    <div id="thanksScreen" class="hidden fixed inset-0 flex items-center justify-center z-50 cursor-pointer" style="background: linear-gradient(135deg, #003D82 0%, #C60C30 100%);" onclick="resetSystem()">
+    <button id="thanksScreen" 
+            class="hidden fixed inset-0 flex items-center justify-center z-50 cursor-pointer border-0 p-0" 
+            style="background: linear-gradient(135deg, #003D82 0%, #C60C30 100%);" 
+            onclick="resetSystem()">
         <div class="text-center px-4">
             <div class="text-white text-9xl mb-6 animate-bounce">
                 <i class="fas fa-check-circle"></i>
@@ -194,7 +196,7 @@
                 <i class="fas fa-hand-pointer mr-2"></i>Toca la pantalla para continuar
             </p>
         </div>
-    </div>
+    </button>
 
     <script>
         // URL de Google Apps Script configurada
